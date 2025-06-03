@@ -36,7 +36,7 @@ with DAG(
     origin_insights_table = tables["origin_insights_table"]
     
     # Generate a unique batch ID using UUID
-    batch_id = f"flight-booking-batch-{env}-{datetime.now().strftime('%Y%m%d%H%M%S')}-{uuid.uuid4()}"
+    batch_id = f"flight-booking-batch-{env}-{str(uuid.uuid4())[:8]}"  # Shortened UUID for brevity
 
     # Task 1: File Sensor for GCS
     file_sensor = GCSObjectExistenceSensor(
