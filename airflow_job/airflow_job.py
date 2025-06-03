@@ -64,7 +64,7 @@ with DAG(
                 f"--origin_insights_table={origin_insights_table}"
             ],
         },
-        "runtime-config": {
+        "runtime_config": {
             "version": "2.2",  # Specify Dataproc version (if needed)
         },
         "environment_config": {
